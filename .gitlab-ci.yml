@@ -46,7 +46,7 @@ publish:
     - docker login -u guwebgroup8 -p $DOCKER_PASSWORD
     - docker push guwebgroup8/gocargo
   environment:
-    name: production
+    name: master
   only:
     refs:
       - 76-deploy-project-to-vps
@@ -68,4 +68,4 @@ deploy:
     url: https://gocargo.jnsl.tk
   only:
     refs:
-      - 76-deploy-project-to-vps
+      - master
